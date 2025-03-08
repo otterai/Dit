@@ -1,0 +1,13 @@
+name = "dishvw"  # Apna worker ka naam
+type = "javascript"
+
+[build]
+command = "npx wrangler deploy"
+upload.format = "service-worker"
+
+[vars]
+GITHUB_PROFILE = "https://github.com/otterai"  # Apna GitHub profile link
+
+[site]
+bucket = "./"  # Ensure it's pointing to the correct directory
+entry-point = "worker.js"  # Change to worker.js
